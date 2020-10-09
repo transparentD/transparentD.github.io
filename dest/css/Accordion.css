@@ -1,0 +1,46 @@
+.accordion {
+  border-radius: 10px; }
+  .accordion .item {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 2px solid #aaa; }
+    .accordion .item .visible-row {
+      position: relative;
+      cursor: pointer;
+      font-weight: 800;
+      padding: 1rem; }
+      .accordion .item .visible-row::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-50%, calc(50% + .6rem)) rotate(90deg);
+        content: "\276F";
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        transition: all .35s; }
+    .accordion .item .expandable {
+      position: relative;
+      height: 0px;
+      overflow: hidden;
+      -webkit-transition: height .2s ease-in;
+      transition: height .2s ease-in; }
+      .accordion .item .expandable p {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        color: white;
+        overflow: hidden;
+        background: #3c5a96; }
+    .accordion .item:last-child {
+      border: none; }
+      .accordion .item:last-child p {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px; }
+  .accordion .expanded .expandable {
+    height: 6rem; }
+  .accordion .expanded .visible-row::after {
+    transform: translate(-100%, calc(50% + .6rem)) rotate(270deg); }

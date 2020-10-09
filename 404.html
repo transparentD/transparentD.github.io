@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="max-age" content="864000">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="Berglas">
+    <meta name="copyright" content="Berglas">
+    <title>404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(67, 216, 255, 0.2); }
+      
+      .content {
+        position: absolute;
+        left: calc(50%);
+        top: calc(20%);
+        transform: translate(-50%, -50%);
+        width: 100%;
+        font-size: 80px;
+        color: #555;
+        text-align: center;
+        text-shadow: #666 1px 2px 2px;
+        font-weight: 600; }
+      
+      .text1 {
+        position: absolute;
+        left: calc(50% - 240px);
+        top: calc(50% + 180px);
+        transform: translate(-50%, -50%);
+        width: 240px;
+        font-size: 240px;
+        color: #555;
+        text-align: center;
+        text-shadow: #666 2px 4px 8px;
+        font-weight: 600;
+        animation: float1 6s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; }
+      
+      .text2 {
+        position: absolute;
+        left: calc(50%);
+        top: calc(50% + 180px);
+        transform: translate(-50%, -50%);
+        width: 240px;
+        font-size: 240px;
+        color: #555;
+        text-align: center;
+        text-shadow: #666 2px 4px 8px;
+        font-weight: 600;
+        animation: float2 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; }
+      
+      .text3 {
+        position: absolute;
+        left: calc(50% + 240px);
+        top: calc(50% + 180px);
+        transform: translate(-50%, -50%);
+        width: 240px;
+        font-size: 240px;
+        color: #555;
+        text-align: center;
+        text-shadow: #666 2px 4px 8px;
+        font-weight: 600;
+        animation: float3 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; }
+      
+      .box {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden; }
+      
+      .wave1 {
+        position: absolute;
+        left: -40%;
+        top: 80%;
+        background: rgba(67, 216, 255, 0.1);
+        border-radius: 40% 45% 35% 38%;
+        animation: wave1 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; }
+      
+      .wave2 {
+        position: absolute;
+        left: -80%;
+        top: 60%;
+        background: rgba(67, 216, 255, 0.3);
+        border-radius: 40% 45% 35% 38%;
+        animation: wave2 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; }
+      
+      .wave3 {
+        position: absolute;
+        left: -20%;
+        top: 50%;
+        background: rgba(67, 216, 255, 0.1);
+        border-radius: 40% 45% 35% 38%;
+        animation: wave3 16s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; }
+      
+      @keyframes wave1 {
+        0% {
+          transform: rotate(45deg); }
+        100% {
+          transform: rotate(405deg); } }
+      
+      @keyframes wave2 {
+        0% {
+          transform: rotate(135deg); }
+        100% {
+          transform: rotate(495deg); } }
+      
+      @keyframes wave3 {
+        0% {
+          transform: rotate(0deg); }
+        100% {
+          transform: rotate(360deg); } }
+      
+      @keyframes float1 {
+        0% {
+          left: calc(50% - 240px);
+          top: calc(50% + 200px);
+          transform: translate(-50%, -50%) rotate(-3deg); }
+        25% {
+          left: calc(50% - 255px);
+          top: calc(50% + 190px);
+          transform: translate(-50%, -50%) rotate(1deg); }
+        50% {
+          left: calc(50% - 260px);
+          top: calc(50% + 205px);
+          transform: translate(-50%, -50%) rotate(7deg); }
+        75% {
+          left: calc(50% - 230px);
+          top: calc(50% + 210px);
+          transform: translate(-50%, -50%) rotate(2deg); }
+        100% {
+          left: calc(50% - 240px);
+          top: calc(50% + 200px);
+          transform: translate(-50%, -50%) rotate(-3deg); } }
+      
+      @keyframes float2 {
+        0% {
+          left: calc(50%);
+          top: calc(50% + 200px);
+          transform: translate(-50%, -50%) rotate(-3deg); }
+        25% {
+          left: calc(50% + 15px);
+          top: calc(50% + 190px);
+          transform: translate(-50%, -50%) rotate(1deg); }
+        50% {
+          left: calc(50% - 10px);
+          top: calc(50% + 205px);
+          transform: translate(-50%, -50%) rotate(7deg); }
+        75% {
+          left: calc(50% - 20px);
+          top: calc(50% + 210px);
+          transform: translate(-50%, -50%) rotate(2deg); }
+        100% {
+          left: calc(50%);
+          top: calc(50% + 200px);
+          transform: translate(-50%, -50%) rotate(-3deg); } }
+      
+      @keyframes float3 {
+        0% {
+          left: calc(50% + 240px);
+          top: calc(50% + 200px);
+          transform: translate(-50%, -50%) rotate(-3deg); }
+        25% {
+          left: calc(50% + 255px);
+          top: calc(50% + 190px);
+          transform: translate(-50%, -50%) rotate(1deg); }
+        50% {
+          left: calc(50% + 260px);
+          top: calc(50% + 205px);
+          transform: translate(-50%, -50%) rotate(7deg); }
+        75% {
+          left: calc(50% + 230px);
+          top: calc(50% + 210px);
+          transform: translate(-50%, -50%) rotate(2deg); }
+        100% {
+          left: calc(50% + 240px);
+          top: calc(50% + 200px);
+          transform: translate(-50%, -50%) rotate(-3deg); } }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="content"><span>Oops！Page not found.</span></div>
+      <div class="text1">4</div>
+      <div class="text2">0</div>
+      <div class="text3">4</div>
+      <div class="wave1" style="width: 3600px; height: 3600px"></div>
+      <div class="wave2" style="width: 4800px; height: 4800px"></div>
+      <div class="wave3" style="width: 2400px; height: 2400px"></div>
+    </div>
+  </body>
+</html>

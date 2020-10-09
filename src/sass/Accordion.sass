@@ -1,0 +1,52 @@
+.accordion
+  border-radius: 10px
+  .item
+    position: relative
+    width: 100%
+    min-height: 60px
+    border-bottom: 2px solid #aaa   
+    .visible-row
+      position: relative
+      cursor: pointer
+      font-weight: 800
+      padding: 1rem
+      .arrow-icon
+      &::after
+        position: absolute
+        top: 0
+        right: 0
+        transform: translate(-50%, calc(50% + .6rem)) rotate(90deg)
+        content: "\276F"
+        width: 1rem
+        height: 1rem
+        text-align: center
+        font-size: 1rem
+        transition: all .35s
+    .expandable
+      position: relative
+      height: 0px
+      overflow: hidden
+      -webkit-transition: height .2s ease-in
+      transition: height .2s ease-in
+      p
+        position: absolute
+        height: 100%
+        width: 100%
+        padding: 1.5rem 1rem
+        color: white
+        overflow: hidden
+        background: rgb(60, 90 ,150)   
+    &:last-child
+      border: none
+      p
+        border-bottom-right-radius: 10px
+        border-bottom-left-radius: 10px
+  .expanded
+    .expandable
+      height: 6rem
+    .visible-row
+      .arrow-icon
+      &::after
+         transform: translate(-100%, calc(50% + .6rem)) rotate(270deg)
+
+
