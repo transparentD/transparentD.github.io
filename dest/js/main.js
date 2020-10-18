@@ -66,8 +66,8 @@ $(function() {
   const next = $('#slider-next')[0];
   const prev = $('#slider-prev')[0];
   const element = $('#slider')[0];
-  const transformValue = $('#slider > ul')[0].offsetWidth;
   const length = $('#slider > ul > li').length;
+  const moveValue =  $('#slider')[0].scrollWidth / length;
   let nextCount = 0;
 
   function changePrev() {
@@ -75,17 +75,28 @@ $(function() {
     if (nextCount == -1) {
       nextCount = length - 1;
     }
-    element.style.transform = `translateX(${transformValue * nextCount * -1}px)`;
+    element.style.transform = `translateX(${moveValue * nextCount * -1}px)`;
   }
   function changeNext() {
     nextCount += 1;
     if (Math.abs(nextCount) > length - 1) {
       nextCount = 0;
     }
-    element.style.transform = `translateX(${transformValue * nextCount * -1}px)`;
+    element.style.transform = `translateX(${moveValue * nextCount * -1}px)`;
   }
   prev.addEventListener('click', changePrev);
   next.addEventListener('click', changeNext);
+
+  $("#slider").swipe({
+    threshold: 0,
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+        if (direction == 'left') {
+          changeNext();
+        } else if (direction == 'right') {
+          changePrev();
+        }
+    }
+  });
 });
 
 $(function() {
@@ -109,4 +120,16 @@ $(function() {
     this.accordionItems.forEach(function (item, index) {
       item.addEventListener("click", function () {return _this.accordionClickhandler(index);});
     });
+});
+
+$(function() {
+  $(".menu-list").each(function(e) {
+    $(this).append("<div class='menu-icon'><span></span></div>");
+    $(this)
+      .find(".menu-icon")
+      .on("click", function() {
+        $(".menu-icon")[e].classList.toggle("active");
+        $(".menu-list > ul")[e].classList.toggle("active");
+      });
+  });
 });

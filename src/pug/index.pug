@@ -8,6 +8,7 @@ html(lang='zh-tw')
     link(rel='stylesheet', type='text/css', href='/dest/css/main.css')
     link(rel='stylesheet', type='text/css', href='/dest/css/Accordion.css')
     script(src='https://code.jquery.com/jquery-3.5.0.min.js' integrity='sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js')
     script(src='/dest/js/main.js')
   body
     .page-borderbox.t
@@ -18,31 +19,35 @@ html(lang='zh-tw')
       .tel
         .title 
           span TEL
-        .number 0800-000-524
+        a(href='tel:0800-000-524').number 0800-000-524
         .depiction 免費電話
     .header
-      ul.menu-list
-        li(title='關於我們')
-          a(href="#page1") 
-            sapn 關於我們
-        li(title='服務項目')
-          a(href="#page2") 
-            sapn 服務項目
-        li(title='相關照片')
-          a(href="#page3") 
-            sapn 相關照片
-        li(title='常見問題')
-          a(href="#page4") 
-            sapn 常見問題
-        li(title='聯絡我們')
-          a(href="#page5") 
-            sapn 聯絡我們
+      a(href="#page0") 
+        .logo
+      nav.menu-list
+        ul
+          li(title='關於我們')
+            a(href="#page1") 
+              sapn 關於我們
+          li(title='服務項目')
+            a(href="#page2") 
+              sapn 服務項目
+          li(title='相關照片')
+            a(href="#page3") 
+              sapn 相關照片
+          li(title='常見問題')
+            a(href="#page4") 
+              sapn 常見問題
+          li(title='聯絡我們')
+            a(href="#page5") 
+              sapn 聯絡我們
     section#page0
       .title
       .content
         .slogan
-          p 安全、專業、快速、便利
-          P 一通電話，我們都在這等候！
+          h1 台南專業包通
+          p 安全、快速、專業
+          P 一通電話，我們都在！
           br
           a(href="#page1")
             .read-more 瞭解更多 
@@ -51,17 +56,17 @@ html(lang='zh-tw')
             span TEL
           .number 0800-000-524
           .depiction 免費電話
-        img(src='./dest/img/home.png').home-img
+        img(src='./dest/img/home.svg').home-img
     section#page1
       .title
         p 關於我們
       .content
         .about-img
         .about-depiction
-          p 我們是一個在地為鄉親服務數年的專業團隊，我們提供家電線上服務站，冷氣、水塔和直立式洗衣機的清洗服務，也提供專業家電維修保養、新品安裝買賣、免費現場冷氣評估。
+          p 我們是一個在台南為鄉親服務數年的專業團隊，主要提供「通水管」、「通馬桶」之服務，另外我們也提供家電線上服務站，冷氣、水塔和直立式洗衣機的清洗服務；專業家電維修保養、新品安裝買賣、免費現場冷氣評估。
           br
           P 專業的技術、親民的服務、實在的價格
-          p 歡迎且感謝歡您來電詢問！
+          p 歡迎您來電詢問！
 
     section#page2
       .title
@@ -165,40 +170,48 @@ html(lang='zh-tw')
           ul
             li
               .element
-                img(src="./dest/img/wm_05.jpg" style='width: 50%; height: 100%;')
-                img(src="./dest/img/wm_06.jpg" style='width: 50%; height: 100%;')
+                img(src="./dest/img/tube_01.jpg")
+                img(src="./dest/img/tube_07.jpg")
                 .depiction
-                  p 洗衣槽清洗#1
+                  p 水管疏通 #1
             li
               .element
-                img(src="./dest/img/wm_03.jpg" style='width: 50%; height: 100%;')
-                img(src="./dest/img/wm_04.jpg" style='width: 50%; height: 100%;')
+                img(src="./dest/img/tube_05.jpg")
+                img(src="./dest/img/tube_09.jpg")
                 .depiction
-                  p 洗衣槽清洗#2
+                  p 水管疏通 #2
+              
             li
               .element
-                img(src="./dest/img/sac_01.jpg" style='width: 50%; height: 100%;')
-                img(src="./dest/img/sac_02.jpg" style='width: 50%; height: 100%;')
+                img(src="./dest/img/wm_05.jpg")
+                img(src="./dest/img/wm_06.jpg")
                 .depiction
-                  p 冷氣清洗#1
+                  p 洗衣槽清洗 #1
             li
               .element
-                img(src="./dest/img/sac_05.jpg" style='width: 50%; height: 100%;')
-                img(src="./dest/img/sac_06.jpg" style='width: 50%; height: 100%;')
+                img(src="./dest/img/wm_03.jpg")
+                img(src="./dest/img/wm_04.jpg")
                 .depiction
-                  p 冷氣清洗#2
+                  p 洗衣槽清洗 #2
             li
               .element
-                img(src="./dest/img/ac_install_10.jpg" style='width: 50%; height: 100%;')
-                img(src="./dest/img/ac_install_14.jpg" style='width: 50%; height: 100%;')
+                img(src="./dest/img/sac_01.jpg")
+                img(src="./dest/img/sac_02.jpg")
+                .depiction
+                  p 冷氣清洗 #1
+            li
+              .element
+                img(src="./dest/img/sac_05.jpg")
+                img(src="./dest/img/sac_06.jpg")
+                .depiction
+                  p 冷氣清洗 #2
+            li
+              .element
+                img(src="./dest/img/ac_install_10.jpg")
+                img(src="./dest/img/ac_install_14.jpg")
                 .depiction
                   p 冷氣安裝
-            li
-              .element
-                img(src="./dest/img/tube_01.jpg" style='width: 50%; height: 100%;')
-                img(src="./dest/img/tube_05.jpg" style='width: 50%; height: 100%;')
-                .depiction
-                  p 水管疏通             
+                   
         svg#slider-prev(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 320 512')
           path(d='M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z')
         svg#slider-next(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 320 512')
@@ -228,19 +241,31 @@ html(lang='zh-tw')
         .accordion
           .item.expanded
             .visible-row
-              .title 問：為什麼要清潔冷氣機呢？
+              p.title 問：廚房排水管不通？該怎麼辦呢？
+              .arrow-icon
+            .expandable 
+              p 答：廚房排水管阻塞的最大主因是油垢，如果使用熱水或化學用品去疏通，油垢經由高溫會變得黏稠，反而更容易堵塞喔！建議請專業人員處理較好。
+          .item
+            .visible-row
+              p.title 問：浴室排水管不通？該怎麼辦呢？
+              .arrow-icon
+            .expandable 
+              p 答：浴室排水管阻塞的最大主因是毛髮，要解決這些毛髮，可以先嘗試化學用品去做初步處理，如無效還是建議尋求專業通水管專家協助。
+          .item
+            .visible-row
+              p.title 問：為什麼要清潔冷氣機呢？
               .arrow-icon
             .expandable 
               p 答：省電和健康。冷氣長時間不清洗，室內機風鼓棉絮堆積導致冷風吹不出來，溫度無法到達，壓縮機持續運轉不休息，室外機散熱片過髒無法正常散熱，導致電流過高耗電！而且，冷氣內長期潮濕，造成發霉細菌滋生，塵螨與灰塵累積在冷氣的散熱鋁片內，又隨著冷氣送風而散布在各個角落，嚴重影響家人的健康。
           .item
             .visible-row
-              .title 問：室外機需要清洗嗎？
+              p.title 問：室外機需要清洗嗎？
               .arrow-icon
             .expandable 
               p 答：大部分在室外淋雨的室外機是不用清洗的，雨水會灰塵帶走，師傅現場評估如果需要清洗的話再行清洗。
           .item
             .visible-row
-              .title 問：我的冷氣為甚麼會漏水？
+              p.title 問：我的冷氣為甚麼會漏水？
               .arrow-icon
             .expandable 
               p 答：冷氣漏水其實就是需要清洗的警告，散熱鋁片上的髒東西隨著水滴流下來塞住了出水孔，水排不出去而滿出來，從你的冷氣下方滴出來。

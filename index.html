@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/dest/css/main.css">
     <link rel="stylesheet" type="text/css" href="/dest/css/Accordion.css">
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="/dest/js/main.js"></script>
   </head>
   <body>
@@ -17,38 +18,41 @@
     <div class="page-borderbox l"></div>
     <div class="fixed-box">
       <div class="tel">
-        <div class="title"> <span>TEL</span></div>
-        <div class="number">0800-000-524</div>
+        <div class="title"> <span>TEL</span></div><a class="number" href="tel:0800-000-524">0800-000-524</a>
         <div class="depiction">免費電話</div>
       </div>
     </div>
-    <div class="header">
-      <ul class="menu-list">
-        <li title="關於我們"><a href="#page1"> 
-            <sapn>關於我們</sapn></a></li>
-        <li title="服務項目"><a href="#page2"> 
-            <sapn>服務項目</sapn></a></li>
-        <li title="相關照片"><a href="#page3"> 
-            <sapn>相關照片</sapn></a></li>
-        <li title="常見問題"><a href="#page4"> 
-            <sapn>常見問題</sapn></a></li>
-        <li title="聯絡我們"><a href="#page5"> 
-            <sapn>聯絡我們</sapn></a></li>
-      </ul>
+    <div class="header"><a href="#page0"> 
+        <div class="logo"></div></a>
+      <nav class="menu-list">
+        <ul>
+          <li title="關於我們"><a href="#page1"> 
+              <sapn>關於我們</sapn></a></li>
+          <li title="服務項目"><a href="#page2"> 
+              <sapn>服務項目</sapn></a></li>
+          <li title="相關照片"><a href="#page3"> 
+              <sapn>相關照片</sapn></a></li>
+          <li title="常見問題"><a href="#page4"> 
+              <sapn>常見問題</sapn></a></li>
+          <li title="聯絡我們"><a href="#page5"> 
+              <sapn>聯絡我們</sapn></a></li>
+        </ul>
+      </nav>
     </div>
     <section id="page0">
       <div class="title"></div>
       <div class="content">
         <div class="slogan">
-          <p>安全、專業、快速、便利</p>
-          <P>一通電話，我們都在這等候！</P><br><a href="#page1">
+          <h1>台南專業包通</h1>
+          <p>安全、快速、專業</p>
+          <P>一通電話，我們都在！</P><br><a href="#page1">
             <div class="read-more">瞭解更多 </div></a>
         </div>
         <div class="tel">
           <div class="title"> <span>TEL</span></div>
           <div class="number">0800-000-524</div>
           <div class="depiction">免費電話</div>
-        </div><img class="home-img" src="./dest/img/home.png">
+        </div><img class="home-img" src="./dest/img/home.svg">
       </div>
     </section>
     <section id="page1">
@@ -58,9 +62,9 @@
       <div class="content">
         <div class="about-img"></div>
         <div class="about-depiction">
-          <p>我們是一個在地為鄉親服務數年的專業團隊，我們提供家電線上服務站，冷氣、水塔和直立式洗衣機的清洗服務，也提供專業家電維修保養、新品安裝買賣、免費現場冷氣評估。</p><br>
+          <p>我們是一個在台南為鄉親服務數年的專業團隊，主要提供「通水管」、「通馬桶」之服務，另外我們也提供家電線上服務站，冷氣、水塔和直立式洗衣機的清洗服務；專業家電維修保養、新品安裝買賣、免費現場冷氣評估。</p><br>
           <P>專業的技術、親民的服務、實在的價格</P>
-          <p>歡迎且感謝歡您來電詢問！</p>
+          <p>歡迎您來電詢問！</p>
         </div>
       </div>
     </section>
@@ -192,44 +196,51 @@
         <div id="slider">
           <ul>
             <li>
-              <div class="element"><img src="./dest/img/wm_05.jpg" style="width: 50%; height: 100%;"><img src="./dest/img/wm_06.jpg" style="width: 50%; height: 100%;">
+              <div class="element"><img src="./dest/img/tube_01.jpg"><img src="./dest/img/tube_07.jpg">
                 <div class="depiction">
-                  <p>洗衣槽清洗#1</p>
+                  <p>水管疏通 #1</p>
                 </div>
               </div>
             </li>
             <li>
-              <div class="element"><img src="./dest/img/wm_03.jpg" style="width: 50%; height: 100%;"><img src="./dest/img/wm_04.jpg" style="width: 50%; height: 100%;">
+              <div class="element"><img src="./dest/img/tube_05.jpg"><img src="./dest/img/tube_09.jpg">
                 <div class="depiction">
-                  <p>洗衣槽清洗#2</p>
+                  <p>水管疏通 #2</p>
                 </div>
               </div>
             </li>
             <li>
-              <div class="element"><img src="./dest/img/sac_01.jpg" style="width: 50%; height: 100%;"><img src="./dest/img/sac_02.jpg" style="width: 50%; height: 100%;">
+              <div class="element"><img src="./dest/img/wm_05.jpg"><img src="./dest/img/wm_06.jpg">
                 <div class="depiction">
-                  <p>冷氣清洗#1</p>
+                  <p>洗衣槽清洗 #1</p>
                 </div>
               </div>
             </li>
             <li>
-              <div class="element"><img src="./dest/img/sac_05.jpg" style="width: 50%; height: 100%;"><img src="./dest/img/sac_06.jpg" style="width: 50%; height: 100%;">
+              <div class="element"><img src="./dest/img/wm_03.jpg"><img src="./dest/img/wm_04.jpg">
                 <div class="depiction">
-                  <p>冷氣清洗#2</p>
+                  <p>洗衣槽清洗 #2</p>
                 </div>
               </div>
             </li>
             <li>
-              <div class="element"><img src="./dest/img/ac_install_10.jpg" style="width: 50%; height: 100%;"><img src="./dest/img/ac_install_14.jpg" style="width: 50%; height: 100%;">
+              <div class="element"><img src="./dest/img/sac_01.jpg"><img src="./dest/img/sac_02.jpg">
+                <div class="depiction">
+                  <p>冷氣清洗 #1</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="element"><img src="./dest/img/sac_05.jpg"><img src="./dest/img/sac_06.jpg">
+                <div class="depiction">
+                  <p>冷氣清洗 #2</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="element"><img src="./dest/img/ac_install_10.jpg"><img src="./dest/img/ac_install_14.jpg">
                 <div class="depiction">
                   <p>冷氣安裝</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="element"><img src="./dest/img/tube_01.jpg" style="width: 50%; height: 100%;"><img src="./dest/img/tube_05.jpg" style="width: 50%; height: 100%;">
-                <div class="depiction">
-                  <p>水管疏通             </p>
                 </div>
               </div>
             </li>
@@ -270,7 +281,25 @@
         <div class="accordion">
           <div class="item expanded">
             <div class="visible-row">
-              <div class="title">問：為什麼要清潔冷氣機呢？</div>
+              <p class="title">問：廚房排水管不通？該怎麼辦呢？</p>
+              <div class="arrow-icon"></div>
+            </div>
+            <div class="expandable"> 
+              <p>答：廚房排水管阻塞的最大主因是油垢，如果使用熱水或化學用品去疏通，油垢經由高溫會變得黏稠，反而更容易堵塞喔！建議請專業人員處理較好。</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="visible-row">
+              <p class="title">問：浴室排水管不通？該怎麼辦呢？</p>
+              <div class="arrow-icon"></div>
+            </div>
+            <div class="expandable"> 
+              <p>答：浴室排水管阻塞的最大主因是毛髮，要解決這些毛髮，可以先嘗試化學用品去做初步處理，如無效還是建議尋求專業通水管專家協助。</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="visible-row">
+              <p class="title">問：為什麼要清潔冷氣機呢？</p>
               <div class="arrow-icon"></div>
             </div>
             <div class="expandable"> 
@@ -279,7 +308,7 @@
           </div>
           <div class="item">
             <div class="visible-row">
-              <div class="title">問：室外機需要清洗嗎？</div>
+              <p class="title">問：室外機需要清洗嗎？</p>
               <div class="arrow-icon"></div>
             </div>
             <div class="expandable"> 
@@ -288,7 +317,7 @@
           </div>
           <div class="item">
             <div class="visible-row">
-              <div class="title">問：我的冷氣為甚麼會漏水？</div>
+              <p class="title">問：我的冷氣為甚麼會漏水？</p>
               <div class="arrow-icon"></div>
             </div>
             <div class="expandable"> 
